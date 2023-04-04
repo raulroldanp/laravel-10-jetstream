@@ -17,11 +17,6 @@ class Products extends Component
         return view('livewire.products');
     }
 
-    public function create() {
-        $this->cleanInputs();
-        $this->openModal();
-    }
-
     public function openModal() {
         $this->modal = true;
     }
@@ -36,9 +31,30 @@ class Products extends Component
         $this->id_product = '';
     }
 
-    public function save() {}
+    public function create() {
+        $this->cleanInputs();
+        $this->openModal();
+    }
 
-    public function edit($id_product) {}
+    public function edit($id) {
+        $product = Product::findOrFail($id);
+        $this->id_product = $id;
+        $this->description = $product->description;
+        $this->amount = $product->amount;
+        $this->openModal();
+    }
 
-    public function delete($id_product) {}
+    public function save() {
+        Product::updateOrCreate(['id' => $this->id_product], [
+            'description' => $this->description,
+            'amount' => $this->amount
+        ]);
+
+        $this->closeModal();
+        $this->cleanInputs();
+    }
+
+    public function delete($id) {
+        $product = Product::find($id)->delete();
+    }
 }
