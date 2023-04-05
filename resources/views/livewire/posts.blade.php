@@ -11,11 +11,11 @@
 
                 <div class="mb-4">
                     <label for="title" class="block font-medium text-sm text-gray-700">Title</label>
-                    <input wire:model.lazy='title' type="text" id="title" class="mt-2 text-sm sm:text-base pl-2 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400">
+                    <input wire:model='title' type="text" id="title" class="mt-2 text-sm sm:text-base pl-2 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400">
                 </div>
                 <div class="mb-4">
                     <label for="slug" class="block font-medium text-sm text-gray-700">Slug</label>
-                    <input wire:model.lazy='slug' type="text" id="slug" class="mt-2 text-sm sm:text-base pl-2 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400">
+                    <input wire:model='slug' type="text" id="slug" class="mt-2 text-sm sm:text-base pl-2 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400">
                 </div>
 
                 <div class="flex items-center">

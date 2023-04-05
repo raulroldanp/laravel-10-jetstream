@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Post;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class Posts extends Component
 {
@@ -29,5 +30,9 @@ class Posts extends Component
         ]);
 
         $this->reset();
+    }
+
+    public function updatedTitle() {
+        $this->slug = SlugService::createSlug(Post::class, 'slug', $this->title);
     }
 }
