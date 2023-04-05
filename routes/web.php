@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Products;
+use App\Http\Livewire\Posts;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +24,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/products', Products::class);
+    Route::get('/posts', Posts::class);
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
