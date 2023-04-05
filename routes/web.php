@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Products;
 use App\Http\Livewire\Posts;
+use App\Http\Livewire\CountriesCity;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/products', Products::class);
     Route::get('/posts', Posts::class);
+    Route::get('/countries-city', CountriesCity::class);
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
