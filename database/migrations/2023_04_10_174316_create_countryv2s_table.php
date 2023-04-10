@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('citiesv2', function (Blueprint $table) {
+        Schema::create('countryv2s', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('state_id')->constrained();
-            $table->string('name')->nullable();
-            $table->string('county')->nullable();
-            $table->double('latitude')->nullable();
-            $table->double('longitude')->nullable();
+            $table->string('name');
+            $table->string('short_code');
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('citiesv2');
+        Schema::dropIfExists('countryv2s');
     }
 };
