@@ -11,12 +11,12 @@ class Company extends Model
     use HasFactory;
     
     protected $fillable = [
-        'city_id',
+        'state_city_id',
         'name'
     ];
 
     public function city(): BelongsTo
     {
-        return $this->belongsTo(City::class);
+        return $this->belongsTo(StateCity::class);
     }
 }

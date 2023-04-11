@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Cityv2 extends Model
+class StateCity extends Model
 {
     use HasFactory;
 
@@ -18,6 +18,11 @@ class Cityv2 extends Model
         'longitude'
     ];
     
+    public function companies(): HasMany
+    {
+        return $this->hasMany(Company::class);
+    }
+
     public function state(): BelongsTo
     {
         return $this->belongsTo(State::class);

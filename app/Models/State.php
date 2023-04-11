@@ -17,11 +17,11 @@ class State extends Model
         'code'
     ];
 
-    public function cities(): HasMany {
-        return $this->hasMany(Cityv2::class);
+    public function stateCities(): HasMany {
+        return $this->hasMany(StateCity::class);
     }
 
     public function country(): BelongsTo {
-        return $this->belongsTo(Countryv2::class);
+        return $this->belongsTo(Country::class);
     }
 }
