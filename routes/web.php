@@ -5,6 +5,7 @@ use App\Http\Livewire\Products;
 use App\Http\Livewire\Posts;
 use App\Http\Livewire\CountriesCity;
 use App\Http\Livewire\Companies;
+use App\Http\Livewire\ExamplesList;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,10 +26,10 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/products', Products::class);
-    Route::get('/posts', Posts::class);
-    Route::get('/countries-city', CountriesCity::class);
-    Route::get('/companies', Companies::class);
+    Route::get('/products', Products::class)->name('products');
+    Route::get('/posts', Posts::class)->name('posts');
+    Route::get('/countries-city', CountriesCity::class)->name('countries-city');
+    Route::get('/companies', Companies::class)->name('companies');
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
