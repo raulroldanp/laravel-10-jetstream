@@ -6,11 +6,11 @@
     </x-slot>
 
     <div class="w-full sm:max-w-xl mt-6 mb-6 px-6 py-8 bg-white shadow-md overflow-hidden sm:rounded-lg">
-        @foreach ($postBoxes as $postBox)
+        @foreach ($posts as $post)
             <div class="pb-3 pt-3 flex">
                 <div class="w-2/12">
                     <div class="text-center">
-                        {{ $postBox->title }}
+                        {{ $post->title }}
                     </div>
                 </div>            
             </div>

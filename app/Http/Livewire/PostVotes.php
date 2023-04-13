@@ -10,7 +10,7 @@ class PostVotes extends Component
     public function render()
     {
         return view('livewire.post-votes', [
-            'postBoxes' => PostBox::with('postVotes')->get()
+            'posts' => PostBox::with('votes')->get()
         ]);
     }
 }

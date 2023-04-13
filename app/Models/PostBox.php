@@ -15,7 +15,7 @@ class PostBox extends Model
         'post_text'
     ];
 
-    public function postVotes(): HasMany
+    public function votes(): HasMany
     {
         return $this->hasMany(PostVote::class);
     }
