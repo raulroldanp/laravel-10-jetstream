@@ -1,7 +1,7 @@
 <div class="flex flex-col sm:justify-center items-center pt-5 pb-5">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Posts: Generate Slug from Title') }}
+            {{ __('Auto-Generate Slug from Title') }}
         </h2>
     </x-slot>
 

@@ -11,17 +11,18 @@
                 @php
                     $laravelLinks = [
                         ['link' => 'chirps.index', 'title' => 'Chirper: Laravel 10 Bootcamp'],
-                        ['link' => 'products', 'title' => 'Products: CRUD with Laravel 10 Jetstream and Livewire']
+                        ['link' => 'products', 'title' => 'Products: Livewire CRUD']
                     ];
 
                     $livewirekitLinks = [
-                        ['link' => 'posts', 'title' => 'Posts: Generate Slug from Title'],
+                        ['link' => 'posts', 'title' => 'Auto-Generate Slug from Title'],
                         ['link' => 'countries-city', 'title' => 'Two Level Parent-Child Dependent Dropdowns'],
-                        ['link' => 'companies', 'title' => 'Three Level Parent-Child Dependent Dropdowns']
+                        ['link' => 'companies', 'title' => 'Three Level Parent-Child Dependent Dropdowns'],
+                        ['link' => 'post-votes', 'title' => 'Upvoting/Downvoting Posts with validation against repeating votes']
                     ];
                 @endphp
                 
-                @livewire('examples-list', ['links' => $laravelLinks, 'title' => 'Laravel Examples'])
+                @livewire('examples-list', ['links' => $laravelLinks, 'title' => 'Laravel 10 Examples'])
                 @livewire('examples-list', ['links' => $livewirekitLinks, 'title' => 'Livewire Kit Examples'])
             
             </div>
