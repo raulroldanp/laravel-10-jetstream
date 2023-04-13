@@ -6,6 +6,7 @@ use App\Http\Livewire\Posts;
 use App\Http\Livewire\CountriesCity;
 use App\Http\Livewire\Companies;
 use App\Http\Livewire\ExamplesList;
+use App\Http\Livewire\PostVotes;
 
 use App\Http\Controllers\ChirpController;
 /*
@@ -34,6 +35,7 @@ Route::middleware([
     Route::get('/posts', Posts::class)->name('posts');
     Route::get('/countries-city', CountriesCity::class)->name('countries-city');
     Route::get('/companies', Companies::class)->name('companies');
+    Route::get('/post-votes', PostVotes::class)->name('post-votes');
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
