@@ -18,7 +18,7 @@
                         ['link' => 'posts', 'title' => 'Auto-Generate Slug from Title'],
                         ['link' => 'countries-city', 'title' => 'Two Level Parent-Child Dependent Dropdowns'],
                         ['link' => 'companies', 'title' => 'Three Level Parent-Child Dependent Dropdowns'],
-                        ['link' => 'post-votes', 'title' => 'Upvoting/Downvoting Posts with validation against repeating votes']
+                        ['link' => 'post-votes.index', 'title' => 'Upvoting/Downvoting Posts with validation against repeating votes']
                     ];
                 @endphp
                 

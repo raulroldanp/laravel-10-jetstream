@@ -7,10 +7,14 @@ use App\Models\PostBox;
 
 class PostVotes extends Component
 {
+    public $sumVotes, $post;
+
+    public function mount($post) {
+        $this->$post = $post;
+    }
+
     public function render()
     {
-        return view('livewire.post-votes', [
-            'posts' => PostBox::with('votes')->get()
-        ]);
+        return view('livewire.post-votes');
     }
 }
