@@ -21,7 +21,7 @@
                     ];
                 @endphp
                 
-                @livewire('examples-list', ['links' => $laravelLinks, 'title' => 'My Examples'])
+                @livewire('examples-list', ['links' => $laravelLinks, 'title' => 'Laravel Examples'])
                 @livewire('examples-list', ['links' => $livewirekitLinks, 'title' => 'Livewire Kit Examples'])
             
             </div>
