@@ -29,7 +29,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::resource('/chirps', ChirpController::class)
-        ->only(['index']);
+        ->only(['index', 'store']);
     Route::get('/products', Products::class)->name('products');
     Route::get('/posts', Posts::class)->name('posts');
     Route::get('/countries-city', CountriesCity::class)->name('countries-city');
