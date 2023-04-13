@@ -6,6 +6,8 @@ use App\Http\Livewire\Posts;
 use App\Http\Livewire\CountriesCity;
 use App\Http\Livewire\Companies;
 use App\Http\Livewire\ExamplesList;
+
+use App\Http\Controllers\ChirpController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +28,8 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+    Route::resource('/chirps', ChirpController::class)
+        ->only(['index']);
     Route::get('/products', Products::class)->name('products');
     Route::get('/posts', Posts::class)->name('posts');
     Route::get('/countries-city', CountriesCity::class)->name('countries-city');

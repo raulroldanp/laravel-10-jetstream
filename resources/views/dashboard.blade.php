@@ -10,6 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
                 @php
                     $laravelLinks = [
+                        ['link' => 'chirps.index', 'title' => 'Chirper: Laravel 10 Bootcamp'],
                         ['link' => 'products', 'title' => 'Products: CRUD with Laravel 10 Jetstream and Livewire']
                     ];
 
