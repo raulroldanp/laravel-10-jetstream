@@ -1,5 +1,7 @@
 <x-slot name="header">
-    <h1 class="text-gray-900 font-semibold text-xl">CRUD with Laravel 10 Jetstream and Livewire</h1>
+    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        {{ __('Products: CRUD with Laravel 10 Jetstream and Livewire') }}
+    </h2>
 </x-slot>    
 
 <div class="py-12">
