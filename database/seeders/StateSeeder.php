@@ -14,7 +14,7 @@ class StateSeeder extends Seeder
     public function run(): void
     {
 
-        State::factory()->count(5)->create();
+        /* State::factory()->count(5)->create(); */
 
         /* $states = [
             [

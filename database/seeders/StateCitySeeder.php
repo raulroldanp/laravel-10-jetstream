@@ -13,6 +13,6 @@ class StateCitySeeder extends Seeder
      */
     public function run(): void
     {
-        StateCity::factory()->hasCompanies(2)->count(10)->create();
+        /* StateCity::factory()->hasCompanies(2)->count(10)->create(); */
     }
 }

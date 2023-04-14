@@ -14,9 +14,10 @@
                     </div>     
                     <div class="w-10/12">
                         <h3 class="text-2xl mb-1">{{ $post->title }}</h3>
-                        <p class="mb-1">{{ $post->post_text }}</p>
+                        <p class="mb-1">{{ Str::words($post->post_text, 30) }}</p>
                     </div>
                 </div>
+                <hr />
             @endforeach        
         </div>
     </div>

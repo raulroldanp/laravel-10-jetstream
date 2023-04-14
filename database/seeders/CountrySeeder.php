@@ -13,7 +13,7 @@ class CountrySeeder extends Seeder
      */
     public function run(): void
     {
-        $countries = [
+/*         $countries = [
             [
                 'id' => 1,
                 'name' => 'Spain',
@@ -44,6 +44,6 @@ class CountrySeeder extends Seeder
             ]
         ];
 
-        Country::insert($countries);
+        Country::insert($countries); */
     }
 }

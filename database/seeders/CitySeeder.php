@@ -13,7 +13,7 @@ class CitySeeder extends Seeder
      */
     public function run(): void
     {
-        $cities = [
+/*         $cities = [
             [
                 'id' => 1,
                 'name' => 'Madrid',
@@ -48,6 +48,6 @@ class CitySeeder extends Seeder
 
         foreach($cities as $city) {
             City::create($city);
-        }
+        } */
     }
 }

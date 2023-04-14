@@ -17,7 +17,6 @@ class StateCityFactory extends Factory
     public function definition(): array
     {
         return [
-            'state_id' => fake()->randomElement([1,2,3,4,5]),
             'name' => fake()->city(),
             'county' => fake()->cityPrefix(),
             'latitude' => fake()->latitude($min = -90, $max = 90),
