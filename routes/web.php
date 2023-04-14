@@ -7,6 +7,7 @@ use App\Http\Livewire\CountriesCity;
 use App\Http\Livewire\Companies;
 use App\Http\Livewire\ExamplesList;
 use App\Http\Livewire\PostVotes;
+use App\Http\Livewire\ProductModalCrud;
 
 use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\PostVotesController;
@@ -37,6 +38,7 @@ Route::middleware([
     Route::get('/countries-city', CountriesCity::class)->name('countries-city');
     Route::get('/companies', Companies::class)->name('companies');
     Route::resource('/post-votes', PostVotesController::class)->only(['index']);
+    Route::get('/products-modal-crud', ProductModalCrud::class)->name('products-modal-crud');
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
