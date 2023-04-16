@@ -46,8 +46,10 @@ class Products extends Component
 
     public function save() {
         Product::updateOrCreate(['id' => $this->id_product], [
+            'name' => $this->description,
             'description' => $this->description,
-            'amount' => $this->amount
+            'amount' => $this->amount,
+            'price' => 0
         ]);
 
         $this->closeModal();
